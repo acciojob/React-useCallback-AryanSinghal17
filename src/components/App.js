@@ -18,7 +18,7 @@ const SkillList = React.memo(({ skills, onDelete }) => {
   );
 });
 
-function UseCallbackComp() {
+function App() {
   const [skill, setSkill] = useState("");
   const [skills, setSkills] = useState([
     "HTML",
@@ -75,4 +75,4 @@ function UseCallbackComp() {
   );
 }
 
-export default UseCallbackComp;
+export default App;
