@@ -60,10 +60,7 @@ function App() {
         placeholder="Enter skill"
       />
 
-      <button
-        id="skill-add-btn"
-        onClick={addSkill}
-      >
+      <button id="skill-add-btn" onClick={addSkill}>
         Add Skill
       </button>
 
