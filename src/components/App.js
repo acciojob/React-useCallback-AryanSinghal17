@@ -7,7 +7,7 @@ const SkillList = React.memo(({ skills, onDelete }) => {
       {skills.map((skill, index) => (
         <li
           key={skill}
-          id={`skill-${index}`}
+          id={`skill-number-${index}`}
           onClick={() => onDelete(skill)}
           style={{ cursor: "pointer", margin: "10px 0" }}
         >
@@ -20,11 +20,12 @@ const SkillList = React.memo(({ skills, onDelete }) => {
 
 function App() {
   const [skill, setSkill] = useState("");
+
   const [skills, setSkills] = useState([
     "HTML",
     "CSS",
     "JavaScript",
-    "React",
+    "React"
   ]);
 
   const addSkill = useCallback(() => {
@@ -32,9 +33,12 @@ function App() {
 
     if (!newSkill) return;
 
-    if (skills.some(
-      (item) => item.toLowerCase() === newSkill.toLowerCase()
-    )) {
+    if (
+      skills.some(
+        (item) =>
+          item.toLowerCase() === newSkill.toLowerCase()
+      )
+    ) {
       return;
     }
 
@@ -60,7 +64,10 @@ function App() {
         placeholder="Enter skill"
       />
 
-      <button id="skill-add-btn" onClick={addSkill}>
+      <button
+        id="skill-add-btn"
+        onClick={addSkill}
+      >
         Add Skill
       </button>
 
